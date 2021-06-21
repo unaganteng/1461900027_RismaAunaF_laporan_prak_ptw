@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MahasiswaController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,5 @@ Route::get('/', function () {
 });
 Route::get('/mahasiswa/pdf', [MahasiswaController::class, 'generate']);
 Route::resource('/mahasiswa', MahasiswaController::class);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa_pdf', [MahasiswaController::class, 'mhs']);

@@ -14,4 +14,12 @@ class MahasiswaController extends Controller
         PDF::loadview('1461900027_RismaAunaF_pdf',['mahasiswa'=>$mhs]);
         return $pdf->stream();
     }
+    public function index()
+    {
+        return view ("mahasiswa");
+    }
+    public function mhs()
+    {
+        return view ("mahasiswa_pdf");
+    }
 }
